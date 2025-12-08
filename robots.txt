@@ -1,0 +1,17 @@
+# robots.txt for TopBudgetMove.com
+# https://topbudgetmove.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://topbudgetmove.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin/private areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/

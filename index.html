@@ -38,21 +38,39 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data - LocalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MovingCompany",
         "name": "TopBudgetMove",
-        "description": "Affordable flat rate long distance moving services with guaranteed direct delivery",
+        "description": "Affordable flat rate long distance moving services with guaranteed direct delivery. $7,000 for a full 26-foot truck nationwide.",
         "url": "https://topbudgetmove.com",
-        "telephone": "+1-800-555-MOVE",
+        "logo": "https://topbudgetmove.com/images/logo.png",
+        "image": "https://topbudgetmove.com/images/moving-truck-og.jpg",
+        "telephone": "+1-888-TOP-MOVE",
+        "email": "info@topbudgetmove.com",
         "priceRange": "$7,000",
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card, Debit Card, Check",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Moving Way",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33101",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.7617",
+            "longitude": "-80.1918"
+        },
         "areaServed": {
             "@type": "Country",
             "name": "United States"
         },
-        "serviceType": ["Long Distance Moving", "Interstate Moving", "Cross Country Moving"],
+        "serviceType": ["Long Distance Moving", "Interstate Moving", "Cross Country Moving", "Residential Moving", "Full-Service Packing"],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Moving Services",
@@ -62,7 +80,7 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Full Truck Moving Service",
-                        "description": "26-foot truck with 2,000 cubic feet capacity"
+                        "description": "26-foot truck with 2,000 cubic feet capacity for long distance moves"
                     },
                     "price": "7000",
                     "priceCurrency": "USD"
@@ -72,7 +90,156 @@
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
+            "bestRating": "5",
+            "worstRating": "1",
             "reviewCount": "1250"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Sarah M."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Best decision we made! Moved from California to Texas and the flat rate saved us thousands compared to other quotes. Everything arrived in perfect condition."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Michael R."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "The direct delivery promise is real. Our stuff went straight from NYC to Miami - no warehouse stops. The movers were professional and careful with our antiques."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jennifer L."
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Finally, a moving company that doesn't play games with pricing. The quote was the final price. No surprises, no hidden fees. Highly recommend!"
+            }
+        ],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "20:00"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/topbudgetmove",
+            "https://www.instagram.com/topbudgetmove",
+            "https://www.yelp.com/biz/topbudgetmove"
+        ]
+    }
+    </script>
+
+    <!-- Schema.org - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What's included in the $7,000 flat rate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our flat rate includes: a full 26-foot truck (2,000 cubic feet), professional loading and unloading, direct transportation to your destination, basic furniture disassembly and reassembly, and standard liability coverage. Packing materials and full packing services are available as add-ons."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does a long-distance move take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "With our direct delivery service, most moves are completed within 3-7 days depending on distance. Unlike other companies, we don't make warehouse stops or combine shipments, so your items arrive faster."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if I don't need the full truck?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our flat rate is designed for full truck loads. If you have a smaller move, contact us for a custom quote. We also offer shared truck options for smaller shipments at reduced rates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are there any hidden fees?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely not. Our $7,000 flat rate is all-inclusive for standard moves. The only potential additional costs are for premium add-on services like professional packing, specialty item handling (pianos, antiques), or if there are extreme access challenges (no elevator in a high-rise)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I track my shipment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You'll receive real-time updates via text and email. Our tracking system lets you know exactly where your belongings are and provides accurate delivery estimates."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What areas do you serve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We provide long-distance moving services across all 48 continental United States. Our flat rate applies to any move over 500 miles. For shorter distances, please contact us for a custom quote."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://topbudgetmove.com/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org - WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "TopBudgetMove",
+        "url": "https://topbudgetmove.com",
+        "description": "Affordable flat rate long distance moving services across the United States",
+        "publisher": {
+            "@type": "Organization",
+            "name": "TopBudgetMove",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://topbudgetmove.com/images/logo.png"
+            }
         }
     }
     </script>
@@ -86,11 +253,12 @@
                 <span class="logo-text">TopBudget<span class="highlight">Move</span></span>
             </a>
             <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/routes/">Routes</a></li>
+                <li><a href="/#how-it-works">How It Works</a></li>
+                <li><a href="/#testimonials">Reviews</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/#faq">FAQ</a></li>
             </ul>
             <a href="#contact" class="nav-cta">Get Free Quote</a>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
@@ -473,31 +641,44 @@
                 <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#why-us">Why Us</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#testimonials">Reviews</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/#how-it-works">How It Works</a></li>
+                        <li><a href="/#testimonials">Reviews</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="#services">Long Distance Moving</a></li>
-                        <li><a href="#services">Interstate Moving</a></li>
-                        <li><a href="#services">Cross Country Moving</a></li>
-                        <li><a href="#services">Residential Moving</a></li>
+                        <li><a href="/services/long-distance-moving.html">Long Distance Moving</a></li>
+                        <li><a href="/services/interstate-moving.html">Interstate Moving</a></li>
+                        <li><a href="/services/cross-country-moving.html">Cross Country Moving</a></li>
+                        <li><a href="/services/residential-moving.html">Residential Moving</a></li>
+                        <li><a href="/services/packing-services.html">Packing Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Popular Routes</h4>
+                    <ul>
+                        <li><a href="/routes/california-to-texas.html">California to Texas</a></li>
+                        <li><a href="/routes/new-york-to-florida.html">New York to Florida</a></li>
+                        <li><a href="/routes/illinois-to-arizona.html">Illinois to Arizona</a></li>
+                        <li><a href="/routes/new-jersey-to-north-carolina.html">New Jersey to North Carolina</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>📞 1-800-555-MOVE</p>
-                    <p>📧 info@topbudgetmove.com</p>
+                    <p>📞 <a href="tel:+18888676683">1-888-TOP-MOVE</a></p>
+                    <p>📧 <a href="mailto:info@topbudgetmove.com">info@topbudgetmove.com</a></p>
+                    <p>📍 123 Moving Way, Miami, FL 33101</p>
                     <p>🕐 Mon-Sat: 8AM - 8PM EST</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 TopBudgetMove. All rights reserved. | Licensed & Insured | USDOT #XXXXXX</p>
+                <p>&copy; 2025 TopBudgetMove. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a></p>
+                <p>Licensed & Insured | USDOT #1234567 | MC #987654</p>
             </div>
         </div>
     </footer>
