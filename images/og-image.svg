@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdf6f0"/>
+      <stop offset="100%" style="stop-color:#fff8f3"/>
+    </linearGradient>
+    <linearGradient id="ogTruck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2b5f"/>
+      <stop offset="100%" style="stop-color:#0f1a3d"/>
+    </linearGradient>
+    <linearGradient id="ogAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5734a"/>
+      <stop offset="100%" style="stop-color:#ff6b35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="1100" cy="100" r="200" fill="#f5734a" opacity="0.1"/>
+  <circle cx="100" cy="530" r="150" fill="#1a2b5f" opacity="0.05"/>
+
+  <!-- Accent bar at top -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#ogAccent)"/>
+
+  <!-- Left side: Text content -->
+  <g transform="translate(80, 120)">
+    <!-- Logo text -->
+    <text x="0" y="60" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900">
+      <tspan fill="#f5734a">Top</tspan><tspan fill="#1a2b5f">Budget</tspan><tspan fill="#1a2b5f">Move</tspan>
+    </text>
+
+    <!-- Tagline -->
+    <text x="0" y="110" font-family="Arial, sans-serif" font-size="24" fill="#666">Flat Rate Long Distance Moving</text>
+
+    <!-- Price highlight -->
+    <rect x="0" y="150" width="320" height="100" rx="12" fill="url(#ogAccent)"/>
+    <text x="160" y="195" font-family="Arial Black, Arial, sans-serif" font-size="48" fill="#fff" text-anchor="middle">$7,000</text>
+    <text x="160" y="230" font-family="Arial, sans-serif" font-size="18" fill="#fff" text-anchor="middle" opacity="0.95">Full 26ft Truck • 500+ Miles</text>
+
+    <!-- Features -->
+    <g transform="translate(0, 290)">
+      <circle cx="12" cy="12" r="10" fill="#27ae60"/>
+      <text x="12" y="17" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">✓</text>
+      <text x="35" y="18" font-family="Arial, sans-serif" font-size="20" fill="#1a2b5f">No Hidden Fees</text>
+    </g>
+    <g transform="translate(0, 335)">
+      <circle cx="12" cy="12" r="10" fill="#27ae60"/>
+      <text x="12" y="17" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">✓</text>
+      <text x="35" y="18" font-family="Arial, sans-serif" font-size="20" fill="#1a2b5f">Direct Delivery Guaranteed</text>
+    </g>
+    <g transform="translate(0, 380)">
+      <circle cx="12" cy="12" r="10" fill="#27ae60"/>
+      <text x="12" y="17" font-family="Arial, sans-serif" font-size="14" fill="#fff" text-anchor="middle">✓</text>
+      <text x="35" y="18" font-family="Arial, sans-serif" font-size="20" fill="#1a2b5f">Licensed &amp; Insured</text>
+    </g>
+  </g>
+
+  <!-- Right side: Truck illustration -->
+  <g transform="translate(580, 180)">
+    <!-- Truck body -->
+    <rect x="0" y="60" width="280" height="150" rx="10" fill="url(#ogTruck)"/>
+    <!-- Truck cabin -->
+    <path d="M280 90 L280 210 L400 210 L400 150 L340 90 Z" fill="url(#ogTruck)"/>
+    <!-- Cabin window -->
+    <path d="M292 105 L292 185 L380 185 L380 148 L332 105 Z" fill="#a8d4ff"/>
+    <!-- Window reflection -->
+    <path d="M300 115 L300 145 L345 145 L345 128 L320 115 Z" fill="#c8e4ff" opacity="0.5"/>
+    <!-- Wheels -->
+    <circle cx="80" cy="225" r="40" fill="#333"/>
+    <circle cx="80" cy="225" r="20" fill="#777"/>
+    <circle cx="80" cy="225" r="7" fill="#555"/>
+    <circle cx="350" cy="225" r="40" fill="#333"/>
+    <circle cx="350" cy="225" r="20" fill="#777"/>
+    <circle cx="350" cy="225" r="7" fill="#555"/>
+    <!-- Moving boxes -->
+    <rect x="20" y="80" width="90" height="90" fill="#ffeaa7" stroke="#fff" stroke-width="4"/>
+    <line x1="20" y1="125" x2="110" y2="125" stroke="#1a2b5f" stroke-width="2"/>
+    <rect x="120" y="100" width="70" height="70" fill="#fff8f3" stroke="#fff" stroke-width="3"/>
+    <rect x="200" y="115" width="55" height="55" fill="#e8ddd4" stroke="#fff" stroke-width="3"/>
+    <!-- Speed lines -->
+    <line x1="-30" y1="100" x2="-10" y2="100" stroke="#f5734a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-40" y1="130" x2="-15" y2="130" stroke="#f5734a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-35" y1="160" x2="-12" y2="160" stroke="#f5734a" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-25" y1="190" x2="-8" y2="190" stroke="#f5734a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom bar with contact -->
+  <rect x="0" y="570" width="1200" height="60" fill="#1a2b5f"/>
+  <text x="100" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff">topbudgetmove.com</text>
+  <text x="600" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff" text-anchor="middle">📞 1-888-TOP-MOVE</text>
+  <text x="1100" y="608" font-family="Arial, sans-serif" font-size="22" fill="#f5734a" text-anchor="end">Get Your Free Quote!</text>
+</svg>
