@@ -103,7 +103,7 @@ async function submitForm(formData) {
 }
 
 async function sendEmail(data) {
-    const WEB3FORMS_ACCESS_KEY = '42901d01-05b4-49d8-9c44-b5ca98711b85';
+    const WEB3FORMS_ACCESS_KEY = 'dfa345a0-682c-4026-b8dc-b3e9b27031ed';
     const formData = {
         access_key: WEB3FORMS_ACCESS_KEY,
         subject: `New Moving Quote Request - ${data.firstName} ${data.lastName}`,
