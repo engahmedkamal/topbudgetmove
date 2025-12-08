@@ -51,8 +51,6 @@ This is a static site with no build process. To develop:
 - Canonical URLs on all pages
 
 ## Key Business Details (for content)
-- Phone: 1-888-TOP-MOVE (1-888-867-6683)
 - Email: info@topbudgetmove.com
-- USDOT: #1234567 | MC: #987654
-- Address: 123 Moving Way, Miami, FL 33101
 - Flat rate: $7,000 for 26-foot truck (2,000 cu ft), 500+ miles
+- Licensed & Insured with FMCSA

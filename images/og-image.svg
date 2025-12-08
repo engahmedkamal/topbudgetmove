@@ -88,7 +88,7 @@
 
   <!-- Bottom bar with contact -->
   <rect x="0" y="570" width="1200" height="60" fill="#1a2b5f"/>
-  <text x="100" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff">topbudgetmove.com</text>
-  <text x="600" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff" text-anchor="middle">📞 1-888-TOP-MOVE</text>
-  <text x="1100" y="608" font-family="Arial, sans-serif" font-size="22" fill="#f5734a" text-anchor="end">Get Your Free Quote!</text>
+  <text x="150" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff">topbudgetmove.com</text>
+  <text x="600" y="608" font-family="Arial, sans-serif" font-size="22" fill="#fff" text-anchor="middle">info@topbudgetmove.com</text>
+  <text x="1050" y="608" font-family="Arial, sans-serif" font-size="22" fill="#f5734a" text-anchor="end">Get Your Free Quote!</text>
 </svg>
