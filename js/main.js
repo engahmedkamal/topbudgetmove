@@ -1,30 +1,144 @@
 document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
+    initScrollReveal();
     initForm();
     initFAQ();
     initSmoothScroll();
+    initQuoteBar();
+    initFloatingLabels();
     setMinDate();
 });
+
+// Floating labels: lift the label whenever a field holds a value. Focus state
+// is handled in CSS via :focus-within; this covers filled + autofilled fields.
+function initFloatingLabels() {
+    const fields = document.querySelectorAll('.form-group input, .form-group textarea');
+    const sync = (el) => {
+        const group = el.closest('.form-group');
+        if (group) group.classList.toggle('is-filled', el.value.trim() !== '');
+    };
+    fields.forEach((el) => {
+        sync(el);
+        ['input', 'change', 'blur'].forEach((evt) => el.addEventListener(evt, () => sync(el)));
+    });
+    // Re-check shortly after load to catch browser autofill.
+    window.addEventListener('load', () => setTimeout(() => fields.forEach(sync), 200));
+}
+
+// Sticky mobile quote bar: visible only while the quote form is off-screen,
+// so the primary action stays one tap away on long mobile scrolls.
+function initQuoteBar() {
+    const bar = document.getElementById('quoteBar');
+    const formWrap = document.getElementById('contact');
+    if (!bar || !formWrap) return;
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const formVisible = entry.isIntersecting;
+                bar.classList.toggle('is-visible', !formVisible);
+                bar.setAttribute('aria-hidden', formVisible ? 'true' : 'false');
+            });
+        }, { threshold: 0.15 });
+        observer.observe(formWrap);
+    }
+
+    // Tapping the bar scrolls to the form (smooth-scroll handles the motion)
+    // then drops the cursor into the first empty field.
+    bar.querySelector('[data-quote-jump]')?.addEventListener('click', () => {
+        setTimeout(() => {
+            const fields = ['firstName', 'lastName', 'phone', 'email', 'movingFrom', 'movingTo'];
+            const target = fields.map((id) => document.getElementById(id)).find((el) => el && !el.value.trim());
+            (target || document.getElementById('firstName'))?.focus({ preventScroll: true });
+        }, 520);
+    });
+}
 
 function initNavigation() {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
+    const hasHero = document.querySelector('.hero');
+
+    function setMenuOpen(open) {
+        if (!mobileMenuBtn || !navLinks) return;
+        navLinks.classList.toggle('active', open);
+        mobileMenuBtn.classList.toggle('active', open);
+        mobileMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('nav-open', open);
+    }
+
+    function closeMenu() {
+        setMenuOpen(false);
+    }
+
     if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+
+        if (!navLinks.querySelector('.nav-cta-mobile')) {
+            const ctaItem = document.createElement('li');
+            ctaItem.innerHTML = '<a href="/#contact" class="nav-cta nav-cta-mobile">Get Free Quote</a>';
+            navLinks.appendChild(ctaItem);
+        }
+
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
+            setMenuOpen(!navLinks.classList.contains('active'));
         });
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenu);
         });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMenu();
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992) closeMenu();
+        }, { passive: true });
     }
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (navbar) navbar.classList.toggle('scrolled', window.pageYOffset > 24);
-    }, { passive: true });
+
+    function updateNavbar() {
+        if (!navbar) return;
+        const scrolled = window.pageYOffset > 24;
+        navbar.classList.toggle('scrolled', scrolled);
+        if (hasHero) {
+            navbar.classList.toggle('at-top', !scrolled);
+        }
+    }
+
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+}
+
+function initScrollReveal() {
+    const reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+
+    // Content is visible by default in CSS. Only opt into the hidden/animated
+    // state once we know JS is running and can guarantee it gets revealed —
+    // this prevents sections from getting stuck invisible if a scroll event
+    // is missed, the browser is slow, or the user lands mid-page via anchor.
+    if (!('IntersectionObserver' in window)) return;
+
+    document.documentElement.classList.add('js-reveal');
+
+    const revealAll = () => {
+        reveals.forEach(el => el.classList.add('visible'));
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Safety net: guarantee every section is visible shortly after load,
+    // even if an observer entry was somehow missed (fast programmatic
+    // scrolling, hash-link navigation, etc.).
+    window.addEventListener('load', () => setTimeout(revealAll, 800));
 }
 
 function initForm() {

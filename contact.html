@@ -42,7 +42,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -156,55 +156,60 @@
                     <div class="form-card">
                         <h2>Request Your Free Quote</h2>
                         <form id="contactForm" class="quote-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="firstName" name="firstName" placeholder=" " autocomplete="given-name" enterkeyhint="next" required>
+                                    <label for="firstName">First name</label>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="lastName" name="lastName" placeholder=" " autocomplete="family-name" enterkeyhint="next" required>
+                                    <label for="lastName">Last name</label>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel" enterkeyhint="next" required>
+                                <label for="phone">Phone number</label>
                                 <span class="error-message"></span>
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                <input type="email" id="email" name="email" placeholder=" " autocomplete="email" inputmode="email" enterkeyhint="next" required>
+                                <label for="email">Email address</label>
                                 <span class="error-message"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
-                                <span class="error-message"></span>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="movingFrom" name="movingFrom" placeholder=" " autocomplete="address-level2" enterkeyhint="next" required>
+                                    <label for="movingFrom">Moving from</label>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="movingTo" name="movingTo" placeholder=" " enterkeyhint="next" required>
+                                    <label for="movingTo">Moving to</label>
+                                    <span class="error-message"></span>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="movingFrom">Moving From</label>
-                                <input type="text" id="movingFrom" name="movingFrom" placeholder="City, State or ZIP" required>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="movingTo">Moving To</label>
-                                <input type="text" id="movingTo" name="movingTo" placeholder="City, State or ZIP" required>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="moveDate">Preferred Move Date</label>
-                                <input type="date" id="moveDate" name="moveDate" required>
+                                <input type="date" id="moveDate" name="moveDate" placeholder=" " enterkeyhint="next" required>
+                                <label for="moveDate" class="label-static">Preferred move date</label>
                                 <span class="error-message"></span>
                             </div>
                             <div class="form-group full-width">
-                                <label for="message">Additional Information (Optional)</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell us about your move - home size, special items, questions..."></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder=" "></textarea>
+                                <label for="message" class="label-static">Additional information (optional)</label>
                             </div>
 
                             <div class="price-display">
-                                <span class="price">$7,000</span>
                                 <span class="price-label">Flat Rate</span>
+                                <span class="price">$7,000</span>
+                                <span class="price-note">All-inclusive. No surprises.</span>
                             </div>
 
                             <button type="submit" class="btn btn-primary btn-full">
-                                <span>Get Free Quote</span>
+                                <span>Get my free quote</span>
                             </button>
-                            <p class="form-note">No obligation. We'll contact you within 24 hours.</p>
+                            <p class="form-note">No obligation · We'll contact you within 24 hours</p>
                         </form>
                     </div>
                 </div>

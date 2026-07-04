@@ -49,7 +49,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
@@ -272,13 +272,79 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
+        <div class="hero-aurora" aria-hidden="true"></div>
         <div class="hero-bg-pattern"></div>
+        <div class="hero-highway" aria-hidden="true">
+            <div class="hero-highway-lanes"></div>
+        </div>
         <div class="container hero-container">
-            <div class="hero-content">
+            <div class="hero-lead">
                 <div class="hero-badge">Texas's #1 Fixed-Cost Long Distance Movers</div>
-                <h1>Moving from <span class="highlight">Dallas</span> or Texas?<br>One Fixed Price. Any State.</h1>
-                <p class="hero-subtitle">Full 26-foot truck from any Texas city to anywhere in the USA. Direct delivery, zero hidden fees.</p>
+                <h1>Moving from <span class="highlight">Dallas</span> or Texas?<br>One fixed price. Any state.</h1>
+                <p class="hero-subtitle">A full 26-foot truck from any Texas city to anywhere in the USA — direct delivery, zero hidden fees.</p>
+                <ul class="hero-checks">
+                    <li>Locked-in $7,000 flat rate</li>
+                    <li>All 48 states, no distance fees</li>
+                    <li>Reply within 2 hours</li>
+                </ul>
+            </div>
 
+            <div class="hero-form-wrapper" id="contact">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h2>Get your fixed quote</h2>
+                        <p class="form-tagline">Takes under a minute · No obligation</p>
+                    </div>
+                    <form id="quoteForm" class="quote-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="firstName" name="firstName" placeholder=" " autocomplete="given-name" enterkeyhint="next" required>
+                                <label for="firstName">First name</label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="lastName" name="lastName" placeholder=" " autocomplete="family-name" enterkeyhint="next" required>
+                                <label for="lastName">Last name</label>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel" enterkeyhint="next" required>
+                            <label for="phone">Phone number</label>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " autocomplete="email" inputmode="email" enterkeyhint="next" required>
+                            <label for="email">Email address</label>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="movingFrom" name="movingFrom" placeholder=" " autocomplete="address-level2" enterkeyhint="next" required>
+                                <label for="movingFrom">Moving from</label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="movingTo" name="movingTo" placeholder=" " enterkeyhint="next" required>
+                                <label for="movingTo">Moving to</label>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="moveDate" name="moveDate" placeholder=" " enterkeyhint="done" required>
+                            <label for="moveDate" class="label-static">Preferred move date</label>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Get my fixed quote — $7,000</span>
+                        </button>
+                        <p class="form-note">All-inclusive price · We'll confirm within 2 hours</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="hero-proof">
                 <div class="rate-ticket" aria-label="Fixed rate: seven thousand dollars">
                     <span class="rate-ticket-label">Your locked-in rate</span>
                     <span class="rate-ticket-amount">$7,000</span>
@@ -303,76 +369,12 @@
                         <span class="stat-label">Hidden Fees</span>
                     </div>
                 </div>
-
-                <div class="hero-cta-group">
-                    <a href="#contact" class="btn btn-primary btn-large">Get Your Fixed Quote</a>
-                    <a href="#how-it-works" class="btn btn-outline btn-large">See How It Works</a>
-                </div>
-            </div>
-
-            <div class="hero-form-wrapper" id="contact">
-                <div class="form-card">
-                    <div class="form-header">
-                        <h2>Get Your Fixed Quote</h2>
-                        <p class="form-tagline">Same price. Any destination.</p>
-                    </div>
-                    <form id="quoteForm" class="quote-form" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                                <span class="error-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                                <span class="error-message"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
-                            <span class="error-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                            <span class="error-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="movingFrom">Moving From (Texas City)</label>
-                            <input type="text" id="movingFrom" name="movingFrom" placeholder="Dallas, TX" required>
-                            <span class="error-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="movingTo">Moving To</label>
-                            <input type="text" id="movingTo" name="movingTo" placeholder="City, State or ZIP" required>
-                            <span class="error-message"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="moveDate">Move Date</label>
-                            <input type="date" id="moveDate" name="moveDate" required>
-                            <span class="error-message"></span>
-                        </div>
-
-                        <div class="price-display">
-                            <span class="price-label">Fixed Cost</span>
-                            <span class="price">$7,000</span>
-                            <span class="price-note">All-inclusive. No surprises.</span>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Book Your Move</span>
-                        </button>
-                        <p class="form-note">We'll contact you within 2 hours</p>
-                    </form>
-                </div>
             </div>
         </div>
     </header>
 
     <!-- Trust Badges -->
-    <section class="trust-badges">
+    <section class="trust-badges reveal">
         <div class="container">
             <div class="badges-wrapper">
                 <div class="badge-item">
@@ -396,7 +398,7 @@
     </section>
 
     <!-- Texas Cities Section -->
-    <section class="texas-cities" id="texas-cities">
+    <section class="texas-cities reveal" id="texas-cities">
         <div class="container">
             <span class="section-eyebrow">Service area</span>
             <h2 class="section-title">Fixed Cost Moving from Any Texas City</h2>
@@ -429,7 +431,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services reveal" id="services">
         <div class="container">
             <span class="section-eyebrow">What's included</span>
             <h2 class="section-title">Everything in Your $7,000 Fixed Cost</h2>
@@ -471,7 +473,7 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="why-us" id="why-us">
+    <section class="why-us reveal" id="why-us">
         <div class="container">
             <h2 class="section-title">Why Texas Families Choose TopBudgetMove</h2>
             <p class="section-subtitle">The only fixed cost mover you'll ever need when leaving the Lone Star State</p>
@@ -502,7 +504,7 @@
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
+    <section class="how-it-works reveal" id="how-it-works">
         <div class="container">
             <span class="section-eyebrow">The process</span>
             <h2 class="section-title">How Your Fixed Cost Move Works</h2>
@@ -534,7 +536,7 @@
     </section>
 
     <!-- Popular Routes from Texas -->
-    <section class="coverage" id="routes">
+    <section class="coverage reveal" id="routes">
         <div class="container">
             <h2 class="section-title">Popular Fixed Cost Routes from Texas</h2>
             <p class="section-subtitle">$7,000 flat rate from Dallas, Houston, Austin, or San Antonio to any US state</p>
@@ -611,7 +613,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <section class="testimonials reveal" id="testimonials">
         <div class="container">
             <h2 class="section-title">What Texas Families Say About Us</h2>
             <p class="section-subtitle">Real reviews from real customers who moved from Texas with our fixed cost service</p>
@@ -646,7 +648,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq" id="faq">
+    <section class="faq reveal" id="faq">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
             <p class="section-subtitle">Everything about our fixed cost moving service from Texas</p>
@@ -711,7 +713,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
+    <section class="final-cta reveal">
         <div class="container">
             <h2>Ready to Leave Texas?</h2>
             <p>Get your guaranteed fixed cost quote today. $7,000 from any Texas city to any US state. No obligations, no pressure.</p>
@@ -791,6 +793,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky mobile quote bar -->
+    <div class="quote-bar" id="quoteBar" aria-hidden="true">
+        <div class="quote-bar-info">
+            <span class="quote-bar-label">Fixed rate</span>
+            <span class="quote-bar-price">$7,000</span>
+        </div>
+        <a href="#contact" class="quote-bar-btn" data-quote-jump>Get my quote</a>
+    </div>
 
     <!-- Success Modal -->
     <div id="successModal" class="modal">
