@@ -40,30 +40,68 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Location/Route Pages -->
+  <!-- Texas Route Pages (Primary) -->
+  <url>
+    <loc>https://topbudgetmove.com/routes/dallas-to-california.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://topbudgetmove.com/routes/dallas-to-florida.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://topbudgetmove.com/routes/dallas-to-new-york.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://topbudgetmove.com/routes/houston-to-california.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://topbudgetmove.com/routes/austin-to-colorado.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://topbudgetmove.com/routes/san-antonio-to-illinois.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legacy Route Pages -->
   <url>
     <loc>https://topbudgetmove.com/routes/california-to-texas.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://topbudgetmove.com/routes/new-york-to-florida.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://topbudgetmove.com/routes/illinois-to-arizona.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://topbudgetmove.com/routes/new-jersey-to-north-carolina.html</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 
   <!-- Legal Pages -->
