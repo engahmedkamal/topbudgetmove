@@ -23,9 +23,8 @@ function initNavigation() {
     }
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
-        const currentScroll = window.pageYOffset;
-        navbar.style.boxShadow = currentScroll > 100 ? '0 4px 20px rgba(0,0,0,0.1)' : '0 2px 8px rgba(0,0,0,0.08)';
-    });
+        if (navbar) navbar.classList.toggle('scrolled', window.pageYOffset > 24);
+    }, { passive: true });
 }
 
 function initForm() {
